@@ -77,7 +77,7 @@ function createNewAnimal(body, animalsArray) {
     );
 
     // return finished code to post route for response
-    return body;
+    return animal;
 }
 
 // validate keys and values entered with newAnimal
