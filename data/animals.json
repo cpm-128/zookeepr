@@ -184,6 +184,24 @@
         "zany"
       ],
       "id": "18"
+    },
+    {
+      "name": "luna",
+      "species": "canine",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "19"
+    },
+    {
+      "name": "luna",
+      "species": "canine",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "20"
     }
   ]
 }

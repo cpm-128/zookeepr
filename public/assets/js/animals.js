@@ -1,5 +1,5 @@
-const { get } = require("http");
-const { addListener } = require("process");
+//const { get } = require("http");
+//const { addListener } = require("process");
 
 const $animalForm = document.querySelector('#animals-form');
 const $displayArea = document.querySelector('#display-area');
