@@ -11,6 +11,9 @@ const PORT = process.env.PORT || 3001;
 // initiate the server and tell it to listen for requests
 const app = express();
 
+// make all font end files in the public folder available to the server, like css and JS
+app.use(express.static('public'));
+
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 //parse incoming JSON data
@@ -130,6 +133,11 @@ app.post('/api/animals', (req, res) => {
         const animal = createNewAnimal(req.body, animals);
         res.json(animal);
     }
+});
+
+// set up index.html ('/') to be served from the server --> only job is to respond with the HTML page in the browser
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 // confirm server port
