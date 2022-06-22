@@ -140,6 +140,22 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
+// set up animals.html to respond when requested in the client browser
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+// set up zookeepers.html to respond when requested in the client
+app.get('/zookeepers', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
+
+// add a wildcard to respond when a user sends a request that does not exist
+// ORDER MATTERS. this should always come last so it does not overwright other get requests
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
 // confirm server port
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
