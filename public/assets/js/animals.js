@@ -1,3 +1,6 @@
+const { get } = require("http");
+const { addListener } = require("process");
+
 const $animalForm = document.querySelector('#animals-form');
 const $displayArea = document.querySelector('#display-area');
 
@@ -30,6 +33,21 @@ const getAnimals = (formData = {}) => {
   });
 
   console.log(queryUrl);
+
+  // set up the server responses via fetch usage syntax
+  fetch(queryUrl)
+    .then(response => {
+      // check for an error
+      if (!response.ok) {
+        return alert('Error: ' + response.statusTest);
+      }
+      return response.json();
+    })
+    // parse the response
+    .then(animalData => {
+      console.log(animalData);
+      printResults(animalData);
+    });
 
 };
 

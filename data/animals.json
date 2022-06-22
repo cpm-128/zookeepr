@@ -166,6 +166,24 @@
         "goofy"
       ],
       "id": "16"
+    },
+    {
+      "name": "Zoey",
+      "species": "Canine",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "loving"
+      ],
+      "id": "17"
+    },
+    {
+      "name": "Luna",
+      "species": "Canine",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "zany"
+      ],
+      "id": "18"
     }
   ]
 }
