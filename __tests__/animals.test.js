@@ -7,6 +7,9 @@ const {
 } = require('../lib/animals');
 const { animals } = require('../data/animals');
 
+// execute methods without actually writing anything to a file during tests
+jest.mock('fs');
+
 test('creates an animal object', () => {
     const animal = createNewAnimal(
         { name: 'Darlene',
