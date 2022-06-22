@@ -153,6 +153,19 @@
         "hungry"
       ],
       "id": "15"
+    },
+    {
+      "name": "Sam",
+      "species": "Dog",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious",
+        "loving",
+        "goofy"
+      ],
+      "id": "16"
     }
   ]
 }
